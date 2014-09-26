@@ -19,6 +19,13 @@ usage
 ``` cd code ```
 ``` source build.sh ```
 
+requirements
+============
+
+It should be rather obvious that mpost and pdflatex are required. On top of
+that I'm using the hepnicenames package for the labels. By modifying the tex
+files, this dependency can be removed. Further depencencies certainly exist.
+
 TODO
 ====
 
