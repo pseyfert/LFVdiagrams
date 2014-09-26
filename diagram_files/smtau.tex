@@ -1,0 +1,41 @@
+
+    \begin{fmffile}{smtau}
+      \begin{fmfgraph*}(150,80)
+  %bottom and top verticies
+        \fmfstraight
+        \fmfleft{is3,is2,is1,i1,i2,i3,i4,i5,i6}
+        \fmfright{os3,os2,os1,o1,o2,o3,o4,o5,o6}
+
+  %\fmf{fermion,lab.side=left,label=$d$}{i0,o0}
+
+        \fmf{phantom}{o1,g1}
+        \fmf{phantom,tension=1.5}{g1,i1}
+
+        \fmffreeze
+
+        \fmf{photon, tension=2.,lab.side=left, lab=$\Pphoton^\ast/\PZ$}{g1,g2}
+        \fmf{fermion,lab.side=left,label=$\APmuon$}{o3,g2}
+        \fmf{fermion,lab.side=left,label=$\Pmuon$}{g2,o5}
+        \fmf{phantom,tension=1.5}{i6,g2}
+
+        \fmffreeze
+
+
+        \fmf{fermion,lab.side=left,label=$\Pgtm$}{i1,w1}
+        \fmf{dashes,lab.side=right,label=$\PWminus$}{w1,w2}
+        \fmf{fermion,lab.side=right,label=$\Pmuon$}{w2,o1}
+
+  %    \fmf{fermion}{i1,w1}
+  %    \fmf{fermion}{w1,g1}
+  %    \fmf{fermion,tension=2}{g1,w2}
+  %    \fmf{fermion}{w2,o1}
+
+        \fmfipath{p[]}
+        \fmf{plain,tension=0,right,label={$\Pgngt\to\Pgngm$},tag=1}{w1,w2}
+        \fmffreeze
+        \fmfiset{p1}{vpath1(__w1,__w2)}
+        \fmfiv{d.sh=cross,d.ang=0,d.size=5thick}{point length(p1)/2 of p1}
+
+      \end{fmfgraph*}
+
+    \end{fmffile}

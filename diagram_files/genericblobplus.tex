@@ -1,0 +1,18 @@
+\begin{fmffile}{genericblobplus}
+  \begin{fmfgraph*}(100,80)
+    \fmfstraight
+    \fmfleft{i0,i1,i2}
+    \fmfright{o0,o1,o2}
+    \fmf{fermion,tension=2,lab.side=left,label=$\Pgtm$}{i1,v1}
+    \fmf{fermion,tension=1,lab.side=left,label=$\Pmuon$}{v1,o0}
+    \fmf{phantom,tension=1}{o2,v1}
+    \fmffreeze
+    \fmf{photon,tension=1,lab.side=right,label=$\Pphoton^\ast$}{v2,v1}
+    \fmf{fermion,tension=1,lab.side=left,label=$\Pmuon$}{v2,o2}
+    \fmffreeze
+    \fmf{fermion,tension=1,label=$\APmuon$}{o1,v2}
+    \fmfblob{.2w}{v1}
+  \end{fmfgraph*}
+\end{fmffile}
+
+

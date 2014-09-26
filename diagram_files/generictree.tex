@@ -1,0 +1,18 @@
+\begin{fmffile}{generictree}
+  \begin{fmfgraph*}(130,80)
+    \fmfstraight
+    \fmfleft{i0,i1,i2}
+    \fmfright{o0,o1,o2}
+    \fmf{fermion,tension=3,lab.side=left,label=$\Pgtm$}{i1,v1}
+    \fmf{plain,tension=1,lab.side=right,label=$\Pmu$}{v1,o0}
+    \fmf{phantom,tension=1}{o2,v1}
+    \fmffreeze
+    \fmf{dashes,tension=1,lab.side=right,label=$X^0/X^{--}$}{v2,v1}
+    \fmf{plain,tension=2,lab.side=left,label=$\Pmu$}{v2,o2}
+    %\fmffreeze
+    \fmf{plain,tension=1,label=$\Pmu$}{o1,v2}
+    \fmfblob{.2w}{v1}
+  \end{fmfgraph*}
+\end{fmffile}
+
+
