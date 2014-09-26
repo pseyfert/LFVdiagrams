@@ -13,6 +13,12 @@ The diagrams are partially self drawn, following the feynmp/feynmf
 documentation, partially they are modified versions of diagrams provided within
 FDL (see LICENSE.md).
 
+usage
+=====
+
+``` cd code ```
+``` source build.sh ```
+
 TODO
 ====
 

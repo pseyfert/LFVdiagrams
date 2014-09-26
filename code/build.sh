@@ -1,9 +1,9 @@
 #!/usr/bin/zsh
 
-mktemp -p pdf_files
+mkdir -p ../pdf_files
 for v in ../diagram_files/*.tex
 do
-  theroot=`echo  $v | sed "s/.tex//" | sed "s/.*\.\///"`
+  theroot=`echo  $v | sed "s/.tex//" | sed "s/.*diagram_files\///"`
   myvar=$(mktemp --suffix=".tex")      # TODO: going to mktemp -d would be much safer!
   thetarget=`echo  $myvar | sed "s/.tex//"`
   cat minimal_head >> $myvar
