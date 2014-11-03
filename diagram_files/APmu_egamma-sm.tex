@@ -1,0 +1,34 @@
+% \author       Moritz Kiehn <kiehn@physi.uni-heidelberg.de>
+% \copyright    Copyright (c) 2014 Moritz Kiehn
+% \license      GNU Public License Version 2
+
+\begin{fmffile}{APmu_egamma-sm}
+\begin{fmfgraph*}(150,80)
+    \fmfstraight
+    \fmfleft{i1}
+    \fmfright{o1,o2,o3}
+
+    % layout skeleton
+    \fmf{phantom,tension=1}{l1,i1}
+    \fmf{phantom,tension=1}{l1,l2}
+    \fmf{phantom,tension=1}{l2,o2}
+    \fmf{phantom,tension=0.2,left,tag=1}{l1,l2}
+    \fmf{phantom,tension=0.2,left,tag=2}{l2,l1}
+    \fmffreeze
+    \fmfipath{p[]}
+    \fmfiset{p1}{vpath1(__l1,__l2)}
+    \fmfiset{p2}{vpath2(__l2,__l1)}
+
+    % incoming / outgoing lines
+    \fmf{fermion,tension=1,label=\APmuon,label.side=left}{l1,i1}
+    \fmfi{fermion,label=\APelectron,label.side=left}{vloc(__o1) -- point 1/6length(p2) of p2}
+    \fmfi{photon,label=\Pphoton}{vloc(__o3) -- point 5/6length(p1) of p1}
+
+    % loop content
+    \fmfi{boson,label=\PWplus}{subpath (0,length(p1)) of p1}
+    \fmfi{boson}{subpath (0,1/6length(p2)) of p2}
+    \fmfi{plain,label=\HepProcess{\APnum\leftrightarrow\APnue}}{subpath (1/6length(p2),length(p2)) of p2}
+    \fmfiv{d.shape=cross,d.size=5thick}{point 1/2length(p2) of p2}
+\end{fmfgraph*}
+\end{fmffile}
+
