@@ -1,0 +1,17 @@
+% \author       Moritz Kiehn <kiehn@physi.uni-heidelberg.de>
+% \copyright    Copyright (c) 2014 Moritz Kiehn
+% \license      GNU Public License Version 2
+
+\begin{fmffile}{APmuon_eee-generic_contact}
+\begin{fmfgraph*}(150,80)
+    \fmfstraight
+    \fmfleft{i1}
+    \fmfright{o1,o2,o3}
+    \fmf{fermion,tension=3,label=\APmuon,label.side=left}{v1,i1}
+    \fmf{fermion,tension=1,label=\APelectron,label.side=left}{o3,v1}
+    \fmf{fermion,tension=1,label=\Pelectron,label.side=right}{v1,o2}
+    \fmf{fermion,tension=1,label=\APelectron,label.side=left}{o1,v1}
+    \fmfblob{.2w}{v1}
+\end{fmfgraph*}
+\end{fmffile}
+

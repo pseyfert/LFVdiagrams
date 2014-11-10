@@ -1,3 +1,6 @@
+# dont add output files
+pdf_files/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

@@ -1,8 +1,0 @@
-\documentclass{minimal}
-\usepackage{feynmp}
-\usepackage{graphicx}
-\usepackage{epsfig}
-\usepackage[utf8]{inputenc}
-\DeclareGraphicsRule{*}{mps}{*}{}
-\usepackage{hepnicenames}
-\begin{document}
