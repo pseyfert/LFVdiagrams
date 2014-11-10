@@ -15,8 +15,8 @@ the [Feynman Diagram Library][fdl]. To comply with their license the resulting
 diagrams are released under the
 [Creative Commons Attribution-ShareAlike 3.0][ccbysa30] license.
 
-The source code used to generate the diagram files is licensed under
-[GNU General Public License, version 2][gpl2].
+The source code that is used to generate the diagram files is licensed under
+the [GNU General Public License, version 2][gpl2].
 
 Usage
 -----
@@ -27,7 +27,7 @@ executing
 
     make
 
-The resulting diagrams can be found in the 'pdf_files' folder.
+The resulting diagrams can be found in the `pdf_files` folder.
 
 
 [feynmf]:   http://ctan.org/pkg/feynmf
