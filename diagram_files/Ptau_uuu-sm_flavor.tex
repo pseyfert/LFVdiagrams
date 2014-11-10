@@ -1,5 +1,5 @@
 
-    \begin{fmffile}{neutralloop}
+    \begin{fmffile}{Ptau_uuu-sm_flavor}
       \begin{fmfgraph*}(150,80)
   %bottom and top verticies
         \fmfstraight
@@ -9,11 +9,11 @@
   %\fmf{fermion,lab.side=left,label=$d$}{i0,o0}
 
         \fmf{phantom}{o1,g1}
-        \fmf{phantom,tension=1.3}{g1,i1}
+        \fmf{phantom,tension=1.5}{g1,i1}
 
         \fmffreeze
 
-        \fmf{dashes, tension=2.,lab.side=left, lab=$\PZ$}{g1,g2}
+        \fmf{photon, tension=2.,lab.side=left, lab=$\Pphoton^\ast/\PZ$}{g1,g2}
         \fmf{fermion,lab.side=left,label=$\APmuon$}{o3,g2}
         \fmf{fermion,lab.side=left,label=$\Pmuon$}{g2,o5}
         \fmf{phantom,tension=1.5}{i6,g2}
@@ -22,7 +22,7 @@
 
 
         \fmf{fermion,lab.side=left,label=$\Pgtm$}{i1,w1}
-        \fmf{dashes,tension=1.3,lab.side=right,label=$X^0$}{w1,w2}
+        \fmf{dashes,lab.side=right,label=$\PWminus$}{w1,w2}
         \fmf{fermion,lab.side=right,label=$\Pmuon$}{w2,o1}
 
   %    \fmf{fermion}{i1,w1}
@@ -31,8 +31,10 @@
   %    \fmf{fermion}{w2,o1}
 
         \fmfipath{p[]}
-        \fmf{plain,tension=0,right,label={$X^-$},tag=1}{w1,w2}
+        \fmf{plain,tension=0,right,label={$\Pgngt\to\Pgngm$},tag=1}{w1,w2}
         \fmffreeze
+        \fmfiset{p1}{vpath1(__w1,__w2)}
+        \fmfiv{d.sh=cross,d.ang=0,d.size=5thick}{point length(p1)/2 of p1}
 
       \end{fmfgraph*}
 

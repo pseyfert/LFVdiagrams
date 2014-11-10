@@ -2,18 +2,20 @@
 % \copyright    Copyright (c) 2014 Moritz Kiehn
 % \license      GNU Public License Version 2
 
-\begin{fmffile}{APmu_egamma-sm}
+\begin{fmffile}{APmuon_eee-sm}
 \begin{fmfgraph*}(150,80)
     \fmfstraight
     \fmfleft{i1}
     \fmfright{o1,o2,o3}
 
     % layout skeleton
-    \fmf{phantom,tension=1}{l1,i1}
-    \fmf{phantom,tension=1}{l1,l2}
+    \fmf{phantom,tension=1.5}{l1,i1}
+    \fmf{phantom,tension=2}{l1,center,l2}
     \fmf{phantom,tension=1}{l2,o2}
-    \fmf{phantom,tension=0.2,left,tag=1}{l1,l2}
-    \fmf{phantom,tension=0.2,left,tag=2}{l2,l1}
+    \fmf{phantom,tension=0.4,left,tag=1}{l1,l2}
+    \fmf{phantom,tension=0.4,left,tag=2}{l2,l1}
+    \fmffreeze
+    \fmf{phantom}{center,g1,o3}
     \fmffreeze
     \fmfipath{p[]}
     \fmfiset{p1}{vpath1(__l1,__l2)}
@@ -21,8 +23,10 @@
 
     % incoming / outgoing lines
     \fmf{fermion,tension=1,label=\APmuon,label.side=left}{l1,i1}
+    \fmf{fermion,tension=1,label=\APelectron,label.side=right,label.dist=0.001}{o3,g1}
+    \fmf{fermion,tension=1,label=\Pelectron,label.side=right}{g1,o2}
     \fmfi{fermion,label=\APelectron,label.side=left}{vloc(__o1) -- point 1/6length(p2) of p2}
-    \fmfi{photon,label=\Pphoton}{vloc(__o3) -- point 5/6length(p1) of p1}
+    \fmfi{photon,label=\Pphoton/\PZ}{point 5/6length(p1) of p1 -- vloc(__g1)}
 
     % loop content
     \fmfi{boson,label=\PWplus}{subpath (0,length(p1)) of p1}
