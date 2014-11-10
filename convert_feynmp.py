@@ -39,7 +39,7 @@ def main(input_path, output_path):
 
         with io.open(tmptex, 'wt') as out:
             out.write(TEMPLATE_HEADER)
-            out.write(input_path)
+            out.write(unicode(input_path))
             out.write(TEMPLATE_FOOTER)
 
         cmd_pdflatex = ['pdflatex',
