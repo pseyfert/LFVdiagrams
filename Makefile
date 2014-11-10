@@ -10,6 +10,5 @@ pdf_files/%.pdf: diagram_files/%.tex | pdf_files/
 
 clean:
 	rm -f $(PDF_FILES)
-	rmdir --ignore-fail-on-non-empty pdf_files
 
 .PHONY: default
