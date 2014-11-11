@@ -3,33 +3,41 @@
 % \license      GNU Public License Version 2
 
 \begin{fmffile}{APmu_eeenunu}
-\begin{fmfgraph*}(150,80)
+\begin{fmfgraph*}(120,80)
     \fmfstraight
-    \fmfleft{ iA,i1,iC,iD,iE,iF,iG,iH,iI,iJ,iK}
-    \fmfright{oA,o1,oC,o2,oE,o3,oG,o4,oI,o5,oK}
+    \fmfleft{ iA,i1,i2,i3,i4,i5,iG}
+    \fmfright{oA,o1,o2,o3,o4,o5,oG}
 
     % layout skeleton
     \fmf{phantom,tension=3}{i1,v1}
     \fmf{phantom,tension=1}{v1,o1}
-    \fmf{phantom,tension=3}{iE,v2}
-    \fmf{phantom,tension=2}{v2,oE}
-    \fmf{phantom,tension=2}{iI,v4}
-    \fmf{phantom,tension=3}{v4,oI}
+    \fmf{phantom,tension=3}{i3,v2}
+    \fmf{phantom,tension=2}{v2,o3}
+    \fmf{phantom,tension=2}{i5,v4}
+    \fmf{phantom,tension=3}{v4,o5}
     \fmffreeze
     \fmf{phantom,tension=5}{v2,v3}
     \fmf{phantom,tension=1}{v3,o3}
     \fmffreeze
 
-    % particles
-    \fmf{fermion,label=\APmuon,label.side=left}{v1,i1}
-    \fmf{fermion,label=\APnum,label.side=left}{o1,v1}
-    \fmf{boson,label=\PWplus,label.side=left,label.dist=thick}{v1,v2}
-    \fmf{fermion,label=\Pnue}{v2,o2}
+    % particle lines
+    \fmf{fermion}{v1,i1}
+    \fmf{fermion}{o1,v1}
+    \fmf{boson,label=\PWplus,label.side=left}{v1,v2}
+    \fmf{fermion}{v2,o2}
     \fmf{plain}{v2,v3}
-    \fmf{fermion,label=\APelectron,label.side=right,label.dist=thick}{o3,v2}
-    \fmf{boson,label={$\Pphoton^\ast$},label.side=left,label.dist=thick}{v3,v4}
-    \fmf{fermion,label=\Pelectron,label.side=right,label.dist=thick}{v4,o4}
-    \fmf{fermion,label=\APelectron,label.side=right,label.dist=thick}{o5,v4}
+    \fmf{fermion}{o3,v2}
+    \fmf{boson,label={$\Pphoton^\ast$},label.side=left}{v3,v4}
+    \fmf{fermion}{v4,o4}
+    \fmf{fermion}{o5,v4}
+
+    % label incoming / outgoing particles
+    \fmfiv{label=\APmuon,label.angle=180}{vloc(__i1)}
+    \fmfiv{label=\APnum,label.angle=0}{vloc(__o1)}
+    \fmfiv{label=\Pnue,label.angle=0}{vloc(__o2)}
+    \fmfiv{label=\APelectron,label.angle=0}{vloc(__o3)}
+    \fmfiv{label=\Pelectron,label.angle=0}{vloc(__o4)}
+    \fmfiv{label=\APelectron,label.angle=0}{vloc(__o5)}
 \end{fmfgraph*}
 \end{fmffile}
 
