@@ -1,5 +1,5 @@
 # dont add output files
-pdf_files/
+gh-pages/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
