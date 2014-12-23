@@ -43,7 +43,7 @@ compilation of the diagrams.
     git clone -b gh-pages git@github.com:<username>/LFVdiagrams.git gh-pages
     make
     cd gh-pages
-    python gen_overview.py
+    make
     git add pdf_files/*.pdf png_files/*.png white_png_files/*.png LFVdiagrams.zip LFVdiagrams.tar.gz outputs.html
     git commit -m "updated output files"
     git push origin gh-pages
