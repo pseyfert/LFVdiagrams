@@ -31,8 +31,11 @@ TEMPLATE_HEADER = """\\documentclass{minimal}
 \\usepackage{hepnicenames}
 \\DeclareGraphicsRule{.1}{mps}{*}{}
 \\begin{document}
+\\begin{fmffile}{"""
+TEMPLATE_MIDDLE = """}
 \\input{"""
 TEMPLATE_FOOTER = """}
+\\end{fmffile}
 \\end{document}
 """
 
@@ -50,6 +53,8 @@ def main(input_path, output_path):
 
         with io.open(tmptex, 'wt') as out:
             out.write(TEMPLATE_HEADER)
+            out.write(u(input_name))
+            out.write(TEMPLATE_MIDDLE)
             out.write(u(input_path))
             out.write(TEMPLATE_FOOTER)
 
