@@ -6,8 +6,8 @@ charged lepton flavour violating processes, e.g. τ→μμμ. To allow users to
 modifiy them or extend them, the code is provided and users are invited to
 extend it.
 
-For simplicity, the resulting diagrams can be found on github, following the
-instructions synchronising [Github Pages][gh-pages].
+For simplicity, the resulting diagrams can be found on the [project github
+page][io].
 
 License
 -------
@@ -36,8 +36,8 @@ white background respectively.
 Updating the gh-pages
 ---------------------
 
-To keep the resulting gh-pages up to date, check out the gh-pages prior to the
-compilation of the diagrams.
+Following the instructions for synchronising [Github Pages][gh-pages], these
+steps will update the [website][io].
 
     rm -r gh-pages
     git clone -b gh-pages git@github.com:<username>/LFVdiagrams.git gh-pages

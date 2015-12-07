@@ -1,0 +1,24 @@
+% \author	     P. Seyfert (pseyfert@cern.ch)
+% \copyright   Copyright (c) 2015 Paul Seyfert
+% \license     Creative-Commons Attribution-ShareAlike 3.0
+
+
+\begin{fmfgraph*}(150,80)
+\fmfstraight
+\fmfleft{g1,g2,di1,s}
+\fmflabel{$\Ptauon$}{s}
+\fmfright{n1,n2,do1,d}
+\fmflabel{$\Pmu^+$}{n1}
+\fmflabel{$\Pmu^-$}{n2}
+\fmflabel{$\Pmuon$}{d}
+\fmf{fermion,tension=1}{s,v1}
+\fmf{fermion,tension=1}{v3,d}
+\fmf{fermion,label.side=left,label=$\Pnu_1,,\Pnu_2,,\Pnu_3$}{v1,v3}
+\fmf{phantom}{di1,v4,v5,do1}
+\fmffreeze
+\fmf{dashes,label=$W$,tension=1}{v1,v4}
+\fmf{dashes,label=$W$,tension=1}{v3,v5}
+\fmf{fermion}{n1,v4,v5,n2}
+\fmf{phantom}{g1,v5,v4,g2}
+\fmf{phantom,label=$\nu_{\mu}$}{v4,v5}
+\end{fmfgraph*}
