@@ -25,3 +25,5 @@ clean:
 	rm -f $(PDF_FILES) $(PNG_FILES) $(WHITE_PNG_FILES)
 
 .PHONY: default clean pdf_files png_files white_png_files
+
+.DELETE_ON_ERROR:

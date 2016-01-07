@@ -29,6 +29,7 @@ TEMPLATE_HEADER = """\\documentclass{minimal}
 \\usepackage[utf8]{inputenc}
 \\usepackage{feynmp}
 \\usepackage{hepnicenames}
+\\usepackage{color}
 \\DeclareGraphicsRule{.1}{mps}{*}{}
 \\begin{document}
 \\begin{fmffile}{"""
