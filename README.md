@@ -53,3 +53,4 @@ steps will update the [website][io].
 [ccbysa30]: https://creativecommons.org/licenses/by-sa/3.0
 [gpl2]:     https://gnu.org/licenses/old-licenses/gpl-2.0.html
 [gh-pages]: http://rickfoosusa.blogspot.de/2011/10/howto-use-doxygen-with-github.html
+[io]:       http://pseyfert.github.io/LFVdiagrams/
